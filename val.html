@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test de Autocuidado Personal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .result {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .high { background-color: #d4edda; color: #155724; }
+    .moderate { background-color: #fff3cd; color: #856404; }
+    .low { background-color: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+
+  <h1>🧘 Test de Autocuidado Personal</h1>
+  <p><strong>Instrucciones:</strong> Contesta honestamente cómo ha sido tu comportamiento en la última semana. Usa la escala del 1 al 5.</p>
+
+  <form id="autocuidadoForm">
+
+    <div class="question">
+      🛌 <strong>1. Sueño:</strong><br>
+      Duermo al menos 7 horas cada noche y me siento descansado/a al despertar.<br>
+      <input type="number" name="q1" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      🍎 <strong>2. Alimentación:</strong><br>
+      Como alimentos nutritivos y trato de mantener una alimentación equilibrada.<br>
+      <input type="number" name="q2" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      🏃 <strong>3. Actividad física:</strong><br>
+      Realizo alguna actividad física al menos 3 veces por semana.<br>
+      <input type="number" name="q3" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      📵 <strong>4. Tiempo personal:</strong><br>
+      Me tomo momentos para mí, sin distracciones ni responsabilidades.<br>
+      <input type="number" name="q4" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      🚫 <strong>5. Límites personales:</strong><br>
+      Sé decir "no" cuando algo no me conviene, sin sentir culpa.<br>
+      <input type="number" name="q5" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      💬 <strong>6. Manejo de emociones:</strong><br>
+      Reconozco mis emociones y las manejo de forma saludable.<br>
+      <input type="number" name="q6" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      🤝 <strong>7. Apoyo social:</strong><br>
+      Mantengo contacto con personas que me apoyan.<br>
+      <input type="number" name="q7" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      📱 <strong>8. Uso de tecnología:</strong><br>
+      Regulo el tiempo en pantallas para no saturarme.<br>
+      <input type="number" name="q8" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      ✨ <strong>9. Actividades que disfruto:</strong><br>
+      Hago cosas que disfruto al menos una vez por semana.<br>
+      <input type="number" name="q9" min="1" max="5" required>
+    </div>
+
+    <div class="question">
+      😮‍💨 <strong>10. Manejo del estrés:</strong><br>
+      Tengo estrategias para manejar el estrés.<br>
+      <input type="number" name="q10" min="1" max="5" required>
+    </div>
+
+    <button type="button" onclick="calcularResultado()">Ver resultado</button>
+  </form>
+
+  <div id="resultado" class="result" style="display:none;"></div>
+
+  <script>
+    function calcularResultado() {
+      const form = document.getElementById('autocuidadoForm');
+      const inputs = form.querySelectorAll('input[type="number"]');
+      let total = 0;
+
+      for (let input of inputs) {
+        const val = parseInt(input.value);
+        if (isNaN(val) || val < 1 || val > 5) {
+          alert("Por favor, completa todas las respuestas con un valor entre 1 y 5.");
+          return;
+        }
+        total += val;
+      }
+
+      const resultadoDiv = document.getElementById("resultado");
+      resultadoDiv.style.display = "block";
+      resultadoDiv.className = "result";
+
+      let mensaje = "";
+      if (total >= 40) {
+        resultadoDiv.classList.add("high");
+        mensaje = `
+          <h2>🌟 Autocuidado alto (40–50 puntos)</h2>
+          <p>Tienes una  rutina sólida de autocuidado. Sigue así y mantente atento/a a los cambios emocionales o físicos. Tal vez puedas compartir tus prácticas con otros.</p>
+        `;
+      } else if (total >= 30) {
+        resultadoDiv.classList.add("moderate");
+        mensaje = `
+          <h2>😊 Autocuidado moderado (30–39 puntos)</h2>
+          <p>Estás en el camino, pero hay áreas que podrías fortalecer. Revisa las preguntas con menor puntuación y piensa en pequeños cambios que podrías hacer esta semana.</p>
+        `;
+      } else if (total >= 20) {
+        resultadoDiv.classList.add("low");
+        mensaje = `
+          <h2>⚠️ Autocuidado bajo (20–29 puntos)</h2>
+          <p>Tu autocuidado necesita atención. No se trata de perfección, sino de priorizarte poco a poco. Comienza con una sola área (como el descanso o los límites) y ve desde ahí.</p>
+        `;
+      } else {
+        resultadoDiv.classList.add("low");
+        mensaje = `
+          <h2>🛑 Señales de alerta (menos de 20 puntos)</h2>
+          <p>Es posible que estés en piloto automático o enfrentando una carga emocional importante. Considera buscar apoyo profesional y enfocar tu energía en ti mismo/a.</p>
+        `;
+      }
+
+      resultadoDiv.innerHTML = mensaje + `
+        <hr>
+        <p><strong>Puntaje total:</strong> ${total}/50</p>
+        <p><em>Recuerda: el autocuidado no es egoísmo, es prevención y amor propio. Empieza con un pequeño cambio hoy.</em></p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
