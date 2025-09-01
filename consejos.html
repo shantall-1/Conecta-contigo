@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos para Journaling - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .content-article {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-article h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-article .highlight {
+            font-style: italic;
+            color: var(--brand-700);
+            font-weight: 500;
+            display: block;
+            text-align: center;
+            padding: 1.2rem;
+            background-color: var(--brand-100);
+            border-left: 4px solid var(--brand-500);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 2rem 0;
+        }
+
+        .content-article ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-article li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .content-article li .icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: var(--brand-500);
+        }
+
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2.5rem auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--brand-500);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+
+        .back-button:hover {
+            background-color: var(--brand-700);
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-in.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+                <span>Conecta Contigo</span>
+            </a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html" class="active">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>Consejos para Comenzar tu Journaling</h1>
+                <p class="subtitle">Aprende a crear el hábito del journaling de manera libre y amorosa, paso a paso.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="content-article container">
+
+                <div class="animate-in" style="--d: .1s">
+                    <h3>Elige tu cuaderno ideal</h3>
+                    <p>
+                        Puede ser simple, decorado o hecho por ti. Lo importante es que te inspire calma, ternura o motivación cada vez que lo veas.
+                    </p>
+                    <div class="highlight">“Un cuaderno que te haga sonreír será tu mejor compañero de journaling.”</div>
+                </div>
+
+                <div class="animate-in" style="--d: .2s">
+                    <h3>No te preocupes por la perfección</h3>
+                    <ul>
+                        <li><span class="icon">✍️</span> Olvida la ortografía y la estética. Escribe para ti.</li>
+                        <li><span class="icon">💡</span> Deja fluir lo que sientes y piensas sin juicios.</li>
+                        <li><span class="icon">🌸</span> Usa frases guía si lo necesitas: “Hoy me sentí…”, “Agradezco por…”.</li>
+                    </ul>
+                </div>
+
+                <div class="animate-in" style="--d: .3s">
+                    <h3>Sé paciente contigo</h3>
+                    <p>
+                        No siempre tendrás ganas de escribir o sabrás qué decir. Está bien. No te obligues ni te juzgues, este es tu espacio de amor y reflexión.
+                    </p>
+                    <ul>
+                        <li><span class="icon">🌟</span> La constancia es más importante que la perfección.</li>
+                        <li><span class="icon">🌟</span> Cada página escrita es un acto de cuidado personal.</li>
+                        <li><span class="icon">🌟</span> Celebra tus pequeños logros diarios.</li>
+                    </ul>
+         <img src="https://i.pinimg.com/736x/e5/b5/ae/e5b5ae0c3da34f7129f82da6d34f05e9.jpg" alt="Cuaderno de journaling">
+                </div>
+
+                <a href="journaling.html" class="back-button animate-in" style="--d: .4s">← Volver a Journaling</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Creado con 💙 para quienes desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones al hacer scroll
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>

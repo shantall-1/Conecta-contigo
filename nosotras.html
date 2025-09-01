@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotras - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            padding: 4rem 0;
+        }
+
+        .content-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-article h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        /* Estilo para las imágenes dentro del contenido */
+        .content-article img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2.5rem auto;
+            display: block;
+        }
+
+        /* Estilo de la lista de valores */
+        .values-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .values-list li {
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .values-list li::before {
+            content: '💜'; /* Marcador con emoji */
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+        /* Estilo para la cita final */
+        .final-quote {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to top, var(--bg) 0%, var(--brand-100) 100%);
+            border-radius: var(--radius);
+            margin: 4rem auto;
+            max-width: 900px;
+        }
+
+        .final-quote blockquote {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 700px;
+            text-align: center;
+            font-style: italic;
+            color: var(--brand-700);
+            font-size: 1.2rem;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+                <span>Conecta Contigo</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html" class="active">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>💜 Nosotras</h1>
+                <p class="subtitle">Creemos en el poder de la escucha, el autocuidado y la comunidad para un bienestar integral.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-article animate-in">
+                <p>Somos un equipo de mujeres que creemos en el poder de la <strong>escucha</strong>, el <strong>autocuidado</strong> y la <strong>comunidad</strong>. Creamos este espacio porque sabemos que crecer no siempre es fácil, y que hablar de lo que sentimos puede ser difícil… pero necesario.</p>
+
+                <p>Aquí queremos decirte algo importante: <strong>tu salud mental importa</strong>.</p>
+
+                <p>Sabemos que muchas veces sentimos ansiedad, tristeza, estrés, dudas o presión. Que a veces cuesta pedir ayuda. Por eso, esta web es un lugar seguro, pensado especialmente para ti: joven, adolescente, estudiante, soñadora, luchadora, en búsqueda de respuestas o simplemente con ganas de estar mejor.</p>
+                <img src="https://images.ctfassets.net/txbhe1wabmyx/1cUap6Nv0TE0XZpgYZfwDh/2bb67f22969f2e442df457115fdb11a0/priscilla-du-preez-9e4n5-xvvbg-unsplash.jpg" alt="Mujeres unidas" class="animate-in" style="--d: .1s">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-article">
+                <div class="animate-in" style="--d: .2s">
+                    <h3>🌱 Nuestra misión</h3>
+                    <p>Acompañarte con información clara, herramientas prácticas y apoyo emocional para que puedas cuidar de ti, a tu ritmo y sin juicios. Queremos que sepas que no estás sola.</p>
+                    <img src="https://www.mujerde10.com/wp-content/uploads/2016/05/mujeres-unidas-.png" alt="Chicas apoyándose" class="animate-in" style="--d: .3s">
+                </div>
+
+                <div class="animate-in" style="--d: .4s">
+                    <h3>🌈 Nuestros valores</h3>
+                    <ul class="values-list">
+                        <li>Empatía</li>
+                        <li>Respeto por las diversidades</li>
+                        <li>Inclusión</li>
+                        <li>Sororidad</li>
+                        <li>Confianza</li>
+                    </ul>
+                    <p>Creemos en una salud mental que sea accesible, humana y con enfoque de género e interculturalidad.</p>
+                </div>
+
+                <div class="animate-in" style="--d: .5s">
+                    <h3>🧩 Nuestro equipo</h3>
+                    <p>Somos estudiantes, activistas comprometidas con el bienestar emocional de las y los jóvenes del Perú. Trabajamos con pasión, cariño y convicción de que otro mundo es posible, y empieza por dentro.</p>
+                    <img src="https://www.fundaciontelefonica.com/wp-content/uploads/2022/06/Piscine-Discover-42-Barcelona-2560x950-1.jpg" alt="Equipo de mujeres" class="animate-in" style="--d: .6s">
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="container final-quote animate-in" style="--d: .7s">
+                <blockquote>
+                    “Cuidar tu mente también es una forma de resistencia.”
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones on scroll
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

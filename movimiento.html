@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Autocuidado - Movimiento</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .hero-section {
+      text-align: center;
+      padding: 5rem 1rem;
+      background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+    }
+
+    .hero-section h1 {
+      font-size: 2.8rem;
+      color: var(--brand-700);
+      margin-bottom: 1rem;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .intro {
+      max-width: 850px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .intro .highlight {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--brand-700);
+      background: var(--brand-100);
+      padding: 0.8rem 1rem;
+      border-left: 4px solid var(--brand-500);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+   
+    .video-section {
+      max-width: 1000px;
+      margin: 4rem auto;
+      padding: 0 1rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      border-radius: var(--radius);
+    }
+
+  
+    .quote {
+      text-align: center;
+      font-style: italic;
+      color: var(--brand-700);
+      font-weight: 500;
+      margin: 4rem auto;
+      font-size: 1.3rem;
+      max-width: 700px;
+      background: var(--brand-100);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+    }
+
+
+    .animate-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s ease;
+    }
+
+    .animate-in.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="container flex-between">
+      <a href="index.html" class="brand">
+        <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+        <span>Conecta Contigo</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="autocuidado.html" class="active">Autocuidado</a></li>
+          <li><a href="journaling.html">Journaling</a></li>
+          <li><a href="estres.html">Estrés</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="nosotras.html">Nosotras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section animate-in">
+      <h1>Movimiento y Autocuidado</h1>
+      <p>Mover tu cuerpo no es solo ejercicio, es liberar tu mente y reconectar contigo misma.</p>
+    </section>
+
+    <section class="intro animate-in">
+      <p>El movimiento es una forma de autocuidado accesible y poderosa. Puede ser tan simple como bailar, caminar, estirarte o practicar yoga unos minutos al día.</p>
+      <p class="highlight">Tu cuerpo siempre agradece cuando eliges moverte con amor.</p>
+    </section>
+
+
+    <section class="video-section animate-in">
+      <div class="video-grid">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/v7AYKMP6rOE" title="Yoga para principiantes"></iframe>
+        </div>
+        <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/bDnE8f2VFOM?si=ilQz6nyhsD4VlE81"frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Estiramientos para calmar ansiedad"></iframe>
+        </div>
+        <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oQEyAHwbZ5g?si=JPkoLRKYdFQ9hWss" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Caminata consciente"></iframe>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="quote animate-in">
+      “El movimiento es un recordatorio de que estás viva, presente y en constante transformación.”
+    </div>
+
+    <div class="back-button-wrapper animate-in" style="text-align: center; margin-bottom: 3rem;">
+      <a href="autocuidado.html" class="back-button">← Volver a Autocuidado</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    const els = document.querySelectorAll('.animate-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Contigo - Inicio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+            .btn {
+            display: inline-block;
+            font-weight: 600;
+            border-radius: 999px;
+            padding: 1rem 1.8rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed), background var(--transition-speed);
+        }
+        .btn.primary {
+            background: var(--brand-500);
+            color: var(--white);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+        .btn.primary:hover {
+            background: var(--brand-700);
+            transform: translateY(-2px);
+        }
+        .btn.ghost {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.7);
+        }
+        .btn.ghost:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+
+        .portada {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+        .portada .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(75, 156, 174, 0.45), rgba(46, 110, 126, 0.7));
+        }
+        .portada-content {
+            position: relative;
+            z-index: 1;
+        }
+        .portada .title {
+            font-size: clamp(2rem, 5vw + 1rem, 4rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .portada .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+
+        .grid.cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            color: inherit;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px -10px rgba(0,0,0,0.15);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: .75rem;
+            font-size: 1.3rem;
+            color: var(--brand-700);
+        }
+        .card p {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        .card .link {
+            color: var(--brand-500);
+            font-weight: 600;
+        }
+        .card .link:hover {
+            color: var(--brand-700);
+        }
+
+        .cita blockquote {
+            font-size: clamp(1.3rem, 1rem + 1vw, 2rem);
+            font-weight: 400;
+            color: var(--brand-700);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        .cta {
+            background: var(--brand-100);
+            text-align: center;
+            padding: 5rem 0;
+        }
+        .cta h2 {
+            color: var(--brand-700);
+            font-size: clamp(1.8rem, 2vw + 1rem, 2.5rem);
+            margin-bottom: 1rem;
+        }
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: var(--text);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="brand">
+                <img src="https://placehold.co/40x40/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo">
+                <span>Conecta Contigo</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="portada">
+        <div class="overlay"></div>
+        <div class="container portada-content">
+            <h1 class="title animate-in">Crecimiento Personal & Salud Mental</h1>
+            <p class="subtitle animate-in">Un espacio seguro para sanar, crecer y reconectar contigo mismo 💙</p>
+            <div class="cta-group animate-in">
+                <a href="autocuidado.html" class="btn primary">Empieza por tu autocuidado</a>
+                <a href="nosotras.html" class="btn ghost">Conoce nuestra misión</a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="features" class="section features">
+        <div class="container">
+            <header class="section-header">
+                <h2>¿Qué encontrarás aquí?</h2>
+                <p>Contenido creado con empatía, accesibilidad y ciencia.</p>
+            </header>
+            <div class="grid cards">
+                <a href="autocuidado.html" class="card">
+                    <h3>💆 Autocuidado</h3>
+                    <p>Pequeños hábitos para sostener grandes cambios.</p>
+                    <span class="link">Explorar →</span>
+                </a>
+                <a href="journaling.html" class="card">
+                    <h3>📓 Journaling</h3>
+                    <p>Escribir para sanar, ordenar y conocerte.</p>
+                    <span class="link">Explorar →</span>
+                </a>
+                <a href="estres.html" class="card">
+                    <h3>💆 Manejo del Estrés</h3>
+                    <p>El estrés no es el enemigo: aprende a regularlo.</p>
+                    <span class="link">Explorar →</span>
+                </a>
+                <a href="testimonios.html" class="card">
+                    <h3>💬 Testimonios</h3>
+                    <p>Historias reales que inspiran y acompañan.</p>
+                    <span class="link">Explorar →</span>
+                </a>
+                <a href="recursos.html" class="card">
+                    <h3>📚 Recursos</h3>
+                    <p>Herramientas y enlaces confiables para ti.</p>
+                    <span class="link">Explorar →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cita">
+        <div class="container">
+            <blockquote>“Tu bienestar importa. Sanar también puede ser un camino bello.”</blockquote>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <h2>¿Quieres empezar hoy con una práctica simple?</h2>
+            <p>Prueba escribir 3 cosas que hiciste bien hoy. No importa si son pequeñas.</p>
+            <a href="journaling.html" class="btn primary">Ir a Journaling</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <!-- Script de animación simple AYUDA IA-->
+    <script>
+        const elementos = document.querySelectorAll('.animate-in');
+        const observador = new IntersectionObserver((entradas) => {
+            entradas.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('in');
+                    observador.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        elementos.forEach(el => observador.observe(el));
+    </script>
+</body>
+</html>

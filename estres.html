@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estrés - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css" />
+   <style>
+    .hero-section {
+        text-align: center;
+        padding: 4rem 0;
+        background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+        color: var(--brand-700);
+        margin-bottom: 1rem;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.2rem;
+        color: var(--muted);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .content-article {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .content-article h3 {
+        font-size: 1.8rem;
+        color: var(--brand-700);
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .content-article p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: var(--text);
+    }
+
+    .content-article img {
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin: 2.5rem auto;
+    }
+
+    .info-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin: 2rem auto;
+        display: block;
+    }
+
+    .tips-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .tip-card {
+        background: var(--bg);
+        padding: 2rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--brand-100);
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition-speed);
+    }
+
+    .tip-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow);
+    }
+
+    .tip-card .icon-wrapper {
+        flex-shrink: 0;
+        background-color: var(--brand-100);
+        color: var(--brand-700);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .tip-card-content h4 {
+        font-size: 1.2rem;
+        color: var(--brand-700);
+        margin-bottom: 0.5rem;
+    }
+
+    .tip-card-content p {
+        font-size: 1rem;
+        color: var(--muted);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .quote-and-button-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 1rem;
+        background: linear-gradient(to top, var(--bg) 0%, var(--brand-100) 100%);
+        border-radius: 0; 
+        margin: 4rem 0; 
+        text-align: center;
+        width: 100%; 
+    }
+
+    .quote-and-button-section blockquote {
+        background-color: var(--white);
+        padding: 3rem;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        margin-bottom: 2rem;
+        max-width: 700px;
+        text-align: center;
+        font-style: italic;
+        color: var(--brand-700);
+        font-size: 1.2rem;
+    }
+
+    .back-button-wrapper {
+        margin-top: 0;
+    }
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--brand-500);
+        color: var(--white);
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background-color var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .back-button:hover {
+        background-color: var(--brand-700);
+        transform: translateY(-2px);
+    }
+</style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+                <span>Conecta Contigo</span>
+            </a>
+            <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html" class="active">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>Manejando el Estrés</h1>
+                <p class="subtitle">El estrés no es tu enemigo. Es una señal que te invita a hacer una pausa y reconectar contigo.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-article">
+                <div class="animate-in">
+                    <h3>¿Qué es realmente el estrés?</h3>
+                    <p>
+                        El estrés es la respuesta natural de tu cuerpo ante cualquier demanda o amenaza. Cuando te sientes estresado, tu sistema nervioso se activa y libera hormonas como el cortisol y la adrenalina. Esto es útil en situaciones de emergencia, pero cuando se mantiene a largo plazo, puede afectar tu bienestar físico y mental. Reconocer esta respuesta es el primer paso para tomar el control.
+                    </p>
+                </div>
+                <img src="https://aceleratucarrera.com/wp-content/uploads/2015/09/estr%C3%A9s.jpg" alt="Una persona sintiendose estresada" class="info-image animate-in" style="--d: .1s">
+            </div>
+        </section>
+
+        <section class="section tips-section">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>5 Estrategias para Encontrar Calma</h2>
+                    <p>Estos pequeños hábitos pueden hacer una gran diferencia en tu día a día.</p>
+                </header>
+
+                <div class="tips-grid">
+                    <div class="tip-card animate-in" style="--d: .1s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <div class="tip-card-content">
+                            <h4>Muévete y Libera Tensión</h4>
+                            <p>El ejercicio físico es un liberador de estrés increíblemente eficaz. No necesitas ir al gimnasio; una caminata, estiramientos o bailar al ritmo de tu música favorita pueden ayudarte a calmarte.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .2s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+                        </div>
+                        <div class="tip-card-content">
+                            <h4>Respira Conscientemente</h4>
+                            <p>La respiración profunda activa la respuesta de relajación del cuerpo. Tómate unos minutos para inhalar profundamente por la nariz y exhalar lentamente por la boca. Siente cómo la calma te invade.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .3s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        </div>
+                        <div class="tip-card-content">
+                            <h4>Planifica y Prioriza</h4>
+                            <p>Sentirte abrumado por una lista interminable de tareas es una causa común de estrés. Organiza tus pendientes en una lista y concéntrate en una cosa a la vez. No tengas miedo de pedir ayuda si la necesitas.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .4s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        </div>
+                        <div class="tip-card-content">
+                            <h4>Desconéctate y Conéctate</h4>
+                            <p>Tómate un respiro de las pantallas y de las redes sociales. En su lugar, conéctate con una actividad que disfrutes: lee un libro, escucha música, o pasa tiempo en la naturaleza. ¡Tu mente te lo agradecerá!</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .5s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="tip-card-content">
+                            <h4>Busca Apoyo</h4>
+                            <p>No tienes que pasar por esto solo. Habla con un amigo, familiar o un consejero. Compartir tus preocupaciones y sentimientos puede aliviar una gran parte de la carga emocional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container quote-and-button-section animate-in" style="--d: .6s">
+                <blockquote>
+                    <p>"Respira profundo, calma tu mente y recuerda que esto también pasará."</p>
+                </blockquote>
+                <div class="back-button-wrapper">
+                    <a href="prueba.html" class="back-button">
+                        Realizar test
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones on scroll
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journaling - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>     
+      .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 2.5rem 0;
+        }
+
+        .content-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-article h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-top: 2rem; 
+            margin-bottom: 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2.5rem auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--brand-100);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-speed);
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .benefit-card .icon-wrapper {
+            flex-shrink: 0;
+            background-color: var(--brand-100);
+            color: var(--brand-700);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .benefit-card-content h4 {
+            font-size: 1.2rem;
+            color: var(--brand-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-card-content p {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .action-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 3rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .action-card h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+        
+        .action-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .action-list a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--brand-100);
+            color: var(--brand-700);
+            padding: 1rem 1.5rem;
+            border-radius: var(--radius);
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+
+        .action-list a:hover {
+            background-color: var(--brand-200);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo"/>
+                <span>Conecta Contigo</span>
+            </a>
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html" class="active">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>El Poder de Escribir</h1>
+                <p class="subtitle">El journaling es tu espacio seguro para soltar, reflexionar y conectar con tu verdadero yo, un acto de autocuidado fundamental.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-article">
+                <div class="animate-in">
+                    <h3>¿Qué es el Journaling?</h3>
+                    <p>
+                        El journaling es el hábito de escribir lo que sientes, piensas y vives en un cuaderno o libreta especial. No se trata solo de contar lo que pasó en el día, sino de conectar con nuestro mundo interior. <b>Es como hablar contigo misma sin que nadie te interrumpa.</b>
+                    </p>
+                </div>
+                <img src="https://emprendedor.com/wp-content/uploads/2021/08/1628704913-journaling1.jpg" alt="Una persona escribiendo en un diario con una pluma" class="animate-in" style="--d: .1s">
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>¿Para qué sirve el Journaling?</h2>
+                    <p>Estos son algunos de los beneficios emocionales y mentales que obtendrás al empezar a escribir.</p>
+                </header>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card animate-in" style="--d: .1s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                        </div>
+                        <div class="benefit-card-content">
+                            <h4>Liberar la Carga</h4>
+                            <p>Escribir te permite soltar pensamientos y emociones que te pesan, liberando espacio mental para la calma.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card animate-in" style="--d: .2s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-compass"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                        </div>
+                        <div class="benefit-card-content">
+                            <h4>Claridad Mental</h4>
+                            <p>Poner tus ideas en papel te ayuda a organizarlas, entender tus emociones y tomar mejores decisiones.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-card animate-in" style="--d: .3s">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                        </div>
+                        <div class="benefit-card-content">
+                            <h4>Autoconocimiento</h4>
+                            <p>Te permite explorar tus miedos, sueños y valores, fortaleciendo la relación contigo misma y tu amor propio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container content-article animate-in">
+                <h3>¿Por qué deberíamos practicarlo?</h3>
+                <p>
+                    Porque vivimos en un mundo lleno de ruido, estrés y presión y a veces olvidamos cuidarnos por dentro. El journaling nos da ese espacio seguro donde no hay juicios ni exigencias, solo tú y tus pensamientos. Es una forma de autocuidado emocional. También nos ayuda a liberar la ansiedad y el estrés, nos motiva a reflexionar, aprender y cambiar, nos conecta con lo que realmente queremos y porque tener un espacio tuyo, donde puedas ser tú sin filtros, ¡vale oro!
+                </p>
+                <img src="https://img.freepik.com/foto-gratis/cafe-cuaderno-sobre-fondo-hojas-otono_23-2148255762.jpg" alt="Una persona escribiendo en un diario con una taza de café" class="animate-in" style="--d: .1s">
+            </div>
+        </section>
+
+        <section class="section tips-section">
+            <div class="container action-card animate-in">
+                <h3>Descubre más sobre el Journaling</h3>
+                <div class="action-list">
+                    <a href="beneficios.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart-pulse"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.49 0-2.87 1.06-4.22 2.78-1.34-1.72-2.72-2.78-4.21-2.78A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7z"/><path d="M11 20L11 16L14 16L14 20"/></svg>
+                        Beneficios emocionales y mentales
+                    </a>
+                    <a href="gratitud.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        Gratitud y reflexión personal
+                    </a>
+                    <a href="consejos.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5l6.74-6.74z"/><line x1="10" y1="10" x2="10" y2="10"/><line x1="14" y1="14" x2="14" y2="14"/></svg>
+                        Consejos para comenzar
+                    </a>
+                    <a href="ejercicios.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                        Ejercicios para escribir cada día
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones on scroll
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

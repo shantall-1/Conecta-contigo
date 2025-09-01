@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recursos de Bienestar - Conecta Contigo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-section {
+      text-align: center;
+      padding: 4rem 0;
+      background: linear-gradient(135deg, var(--brand-100), #f7e6f7);
+    }
+
+    .hero-section h1 {
+      font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+      color: var(--brand-700);
+      margin-bottom: 1rem;
+    }
+
+    .hero-section .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .resource-card {
+      background-color: var(--white);
+      border: 1px solid var(--brand-100);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: transform var(--transition-speed);
+    }
+
+    .resource-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .resource-card h3 {
+      color: var(--brand-700);
+      margin-bottom: 0.75rem;
+      font-size: 1.2rem;
+    }
+
+    .resource-card p {
+      font-size: 0.95rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .resource-card a.button {
+      display: inline-block;
+      background-color: var(--brand-500);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color var(--transition-speed);
+    }
+
+    .resource-card a.button:hover {
+      background-color: var(--brand-700);
+    }
+
+    .resource-card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .resource-card ul li {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .section-divider {
+      margin-top: 5rem;
+      border-top: 1px solid var(--brand-200);
+      padding-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container flex-between">
+      <a href="index.html" class="brand">
+        <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+        <span>Conecta Contigo</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="autocuidado.html">Autocuidado</a></li>
+          <li><a href="journaling.html">Journaling</a></li>
+          <li><a href="estres.html">Estrés</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html" class="active">Recursos</a></li>
+          <li><a href="nosotras.html">Nosotras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section animate-in">
+      <div class="container">
+        <h1>Recursos de Bienestar y Autocuidado</h1>
+        <p class="subtitle">
+          Accede a herramientas gratuitas, líneas de apoyo y contenidos diseñados para acompañarte emocionalmente.
+        </p>
+      </div>
+    </section>
+
+    <!-- AYUDA INMEDIATA -->
+    <section class="section animate-in">
+      <div class="container">
+        <header class="section-header">
+          <h2>Ayuda Inmediata</h2>
+          <p>Opciones disponibles 24/7 para conversar o recibir orientación profesional.</p>
+        </header>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Línea 113 Salud Mental (MINSA)</h3>
+            <p>Atención gratuita las 24 horas. Llama al 113 opción 5 desde cualquier teléfono.</p>
+            <a class="button" href="https://www.gob.pe/555-recibir-informacion-y-orientacion-en-salud" target="_blank">Visitar</a>
+          </div>
+          <div class="resource-card">
+            <h3>Chat “Habla Franco” (DEVIDA)</h3>
+            <p>Conversaciones anónimas con profesionales. También puedes llamar al (01) 508-4400.</p>
+            <a class="button" href="https://www.hablafranco.gob.pe/" target="_blank">Ir al sitio</a>
+          </div>
+          <div class="resource-card">
+            <h3>Portal de Salud Mental - MINSA</h3>
+            <p>Guías, artículos y servicios oficiales de salud mental en Perú.</p>
+            <a class="button" href="https://www.gob.pe/saludmental" target="_blank">Ver recursos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AUTOCUIDADO Y BIENESTAR -->
+    <section class="section section-divider animate-in">
+      <div class="container">
+        <header class="section-header">
+          <h2>Autocuidado y Bienestar</h2>
+          <p>Herramientas que te acompañan día a día para construir una relación más amable contigo mismo/a.</p>
+        </header>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Autocuidado Emocional</h3>
+            <p>Consejos prácticos para tu bienestar mental diario.</p>
+            <a class="button" href="https://grupopuntodepartida.com/2024/09/27/10-consejos-para-el-autocuidado/" target="_blank">Ir al sitio</a>
+          </div>
+          <div class="resource-card">
+            <h3>Guía NIMH (USA)</h3>
+            <p>Recurso del Instituto Nacional de Salud Mental sobre cómo cuidar tu salud emocional.</p>
+            <a class="button" href="https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health" target="_blank">Ver guía</a>
+          </div>
+          <div class="resource-card">
+            <h3>Manual de Autocuidado - UNICEF</h3>
+            <p>Guía gratuita para jóvenes que desean fortalecer su autocuidado.</p>
+            <a class="button" href="Manual de Autocuidado.pdf" target="_blank">Descargar PDF</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS DIGITALES -->
+    <section class="section section-divider animate-in">
+      <div class="container">
+        <header class="section-header">
+          <h2>Herramientas Digitales</h2>
+          <p>Apps y recursos en línea que puedes explorar para tu bienestar emocional.</p>
+        </header>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Apps Recomendadas</h3>
+            <ul>
+              <li>📲 <strong>Intellect</strong> – hábitos mentales</li>
+              <li>📲 <strong>Sanvello</strong> – ansiedad y ánimo</li>
+              <li>📲 <strong>Meditopia</strong> – meditación</li>
+              <li>🎙️ <strong>ConscienteMENTE</strong> – podcast</li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h3>Diario y Journaling</h3>
+            <ul>
+              <li>📘 <a href="https://www.journalbuddies.com" target="_blank">Journal Buddies</a></li>
+              <li>📘 <a href="https://www.youtube.com/watch?v=79Hqbzs5GQg" target="_blank">Bullet Journal</a></li>
+              <li>📘 <a href="https://www.canva.com/s/templates?query=journaling" target="_blank">Plantillas en Canva</a></li>
+            </ul>
+          </div>
+          <div class="resource-card">
+            <h3>Libros y Series</h3>
+            <ul>
+              <li>📖 El poder del ahora – Eckhart Tolle</li>
+              <li>📖 Hábitos atómicos – James Clear</li>
+              <li>📖 Manual de autocuidado para jóvenes que sienten demasiado</li>
+              <li>📺 The Mind, Explained (Netflix)</li>
+              <li>📺 Merlí</li>
+              <li>📺 Headspace(Netflix)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APOYO Y EDUCACIÓN EMOCIONAL -->
+    <section class="section section-divider animate-in">
+      <div class="container">
+        <header class="section-header">
+          <h2>Apoyo y Educación Emocional</h2>
+          <p>Programas, talleres y recursos para conocerte más y sentirte acompañado/a.</p>
+        </header>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h3>Conoce tus emociones</h3>
+            <p>Incluye tests breves y una guía en PDF: “¿Cómo hablo de lo que siento?”</p>
+            <a class="button" href="https://habilidadsocial.com/test-de-inteligencia-emocional/" target="_blank">Descargar guía</a>
+          </div>
+          <div class="resource-card">
+            <h3>Comunidad y Apoyo</h3>
+            <p>Encuentra talleres o centros de salud mental cercanos a ti.</p>
+            <a class="button" href="https://www.gob.pe/minsa" target="_blank">Más información</a>
+          </div>
+        </div>
+    
+    </section>
+  </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+        <p>Creado con 💙 por y para jovenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+  <script>
+    // Animaciones on scroll 
+    const els = document.querySelectorAll('.animate-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+</html>

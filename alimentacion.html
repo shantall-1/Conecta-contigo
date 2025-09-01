@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentación Saludable - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #F7E6E6, var(--brand-100));
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-article h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+        
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2.5rem auto;
+        }
+
+
+        .tips-section {
+            background-color: var(--white);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .tip-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--brand-100);
+        }
+
+        .tip-card .icon-wrapper {
+            flex-shrink: 0;
+            background-color: var(--brand-100);
+            color: var(--brand-700);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .tip-card-content h4 {
+            font-size: 1.2rem;
+            color: var(--brand-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .tip-card-content p {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+        
+ 
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        .benefits-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background-color: var(--brand-100);
+            border-radius: 8px;
+        }
+        .benefits-list .icon {
+            color: var(--brand-500);
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+ <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo"/>
+                <span>Conecta Contigo</span>
+            </a>
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html" class="active">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>Nutre tu Cuerpo, Cuida tu Mente</h1>
+                <p class="subtitle">Descubre cómo una alimentación consciente y amable puede llenarte de energía, mejorar tu ánimo y fortalecer tu bienestar.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content-article">
+                    <div class="animate-in">
+                        <h3>Comer bien es un acto de amor propio</h3>
+                        <p>
+                           Alimentarse bien no se trata de dietas estrictas ni de prohibiciones. Es una forma de escuchar a tu cuerpo y darle con cariño lo que necesita para funcionar, tener energía y sentirse feliz. Una alimentación saludable es encontrar un equilibrio entre lo que te nutre y lo que disfrutas, sin culpas.
+                        </p>
+                        <p>
+                            Cuando nutrimos nuestro cuerpo de forma consciente, los beneficios se sienten en todas partes:
+                        </p>
+                        <ul class="benefits-list">
+                            <li><span class="icon">🍎</span> Tenemos más energía durante el día.</li>
+                            <li><span class="icon">🤔</span> Nuestra concentración y memoria mejoran.</li>
+                            <li><span class="icon">😄</span> El estado de ánimo se vuelve más estable y positivo.</li>
+                            <li><span class="icon">💪</span> Fortalecemos nuestro sistema inmunológico.</li>
+                        </ul>
+                    </div>
+
+                    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1170&auto=format&fit=crop" alt="Una mesa llena de frutas y verduras frescas y coloridas" class="animate-in" style="--d: .1s">
+                </article>
+            </div>
+        </section>
+
+        <section class="section tips-section">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>Consejos para una Alimentación Amable</h2>
+                    <p>Pequeños hábitos que puedes integrar en tu día a día para mejorar tu relación con la comida.</p>
+                </header>
+
+                <div class="tips-grid">
+                    <div class="tip-card animate-in" style="--d: .1s">
+                        <div class="icon-wrapper">1</div>
+                        <div class="tip-card-content">
+                            <h4>Llena tu plato de colores</h4>
+                            <p>Intenta que la mitad de tu plato esté compuesto por frutas y verduras. Son fuente de vitaminas y fibra. Puedes incluirlas en ensaladas, batidos, sopas o como snacks.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .2s">
+                        <div class="icon-wrapper">2</div>
+                        <div class="tip-card-content">
+                            <h4>No te saltes comidas</h4>
+                            <p>Saltarte comidas puede dejarte sin energía y provocar más ansiedad por comer después. Respeta tus horarios y escucha las señales de hambre de tu cuerpo.</p>
+                        </div>
+                    </div>
+                    <div class="tip-card animate-in" style="--d: .3s">
+                        <div class="icon-wrapper">3</div>
+                        <div class="tip-card-content">
+                            <h4>Incluye proteínas de calidad</h4>
+                            <p>Las proteínas (huevo, pollo, pescado, legumbres, tofu) te ayudan a sentirte satisfecha por más tiempo y son esenciales para tus músculos y desarrollo.</p>
+                        </div>
+                    </div>
+                     <div class="tip-card animate-in" style="--d: .4s">
+                        <div class="icon-wrapper">4</div>
+                        <div class="tip-card-content">
+                            <h4>Hidrátate constantemente</h4>
+                            <p>El agua es fundamental para que tu cuerpo funcione correctamente. Ten una botella de agua a la mano durante el día para recordar que debes tomar.</p>
+                        </div>
+                    </div>
+                     <div class="tip-card animate-in" style="--d: .5s">
+                        <div class="icon-wrapper">5</div>
+                        <div class="tip-card-content">
+                            <h4>Disfruta sin culpa</h4>
+                            <p>El autocuidado también significa darte permiso para disfrutar de tus comidas favoritas sin castigarte. La clave está en el equilibrio, no en la restricción.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="back-button-wrapper animate-in" style="--d: .6s">
+                    <a href="autocuidado.html" class="back-button">
+                        Volver a Autocuidado
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+              <p>Creado con 💙 por y para jovenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+    // Animaciones on scroll 
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

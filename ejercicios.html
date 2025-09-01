@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Journaling - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .content-article {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-article .highlight {
+            font-style: italic;
+            color: var(--brand-700);
+            font-weight: 500;
+            display: block;
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--brand-100);
+            border-left: 4px solid var(--brand-500);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 2rem 0;
+        }
+
+        .content-article ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-article li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-article li .icon {
+            font-size: 1.5rem;
+            margin-right: 12px;
+            color: var(--brand-500);
+        }
+
+        .content-article li p {
+            margin: 0;
+        }
+
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--brand-500);
+            color: var(--white);
+            font-weight: 600;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: background-color var(--transition-speed);
+        }
+
+        .back-button:hover {
+            background-color: var(--brand-700);
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-in.in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+                <span>Conecta Contigo</span>
+            </a>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html" class="active">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>Ejercicios para escribir cada día</h1>
+                <p class="subtitle">Dedica un momento para ti misma, explora tus emociones y fortalece tu bienestar a través del journaling.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="content-article container animate-in">
+
+                <div style="--d: .1s">
+                    <p class="highlight">Escribir cada día en tu journal es un acto de cuidado personal, un espacio seguro para ser tú misma sin máscaras ni filtros.</p>
+
+                    <h3>Ejercicios diarios de journaling</h3>
+                    <ul>
+                        <li><span class="icon">🖊️</span><b>Hoy me sentí…</b>
+                            <p>Comienza con esta frase y termina contando cómo te sentiste durante el día. No importa si fue bueno o malo.</p>
+                        </li>
+
+                        <li><span class="icon">💭</span><b>Lo que me preocupa ahora es…</b>
+                            <p>Libera lo que te agobia o da vueltas en tu mente. Al escribirlo, muchas veces se siente más ligero.</p>
+                        </li>
+
+                        <li><span class="icon">🙏</span><b>Estoy agradecid@ por…</b>
+                            <p>Escribe tres cosas por las que te sientes agradecida hoy. Pueden ser pequeñas: una sonrisa, una canción, un cielo bonito.</p>
+                        </li>
+
+                        <li><span class="icon">🎯</span><b>Mi meta de hoy es…</b>
+                            <p>Define una meta sencilla para el día. Esto te ayuda a enfocarte y motivarte desde la mañana.</p>
+                        </li>
+
+                        <li><span class="icon">📖</span><b>Hoy aprendí que…</b>
+                            <p>Reflexiona sobre una lección del día. Puede ser algo emocional, personal o incluso una idea nueva.</p>
+                        </li>
+                    </ul>
+
+                    <img src="https://i.pinimg.com/736x/57/78/de/5778de5a66743189605e3717e1ec2dc6.jpg" alt="Ejercicios de journaling">
+                </div>
+
+                <a href="journaling.html" class="back-button animate-in" style="--d: .2s">← Volver a Tips</a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>Creado con 💙 para quienes desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animaciones on scroll
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTIMONIOS - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --testimonial-bg-gradient-start: #4B9CAE; 
+            --testimonial-bg-gradient-end: #3E808E;  
+            --testimonial-text: #FFFFFF;
+            --testimonial-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
+            --star-color: #FFC107;  
+        }
+
+        .testimonials-section {
+            background: linear-gradient(to bottom, var(--brand-100) 0%, var(--brand-300) 100%); 
+            padding: 6rem 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 2.5rem; 
+            justify-content: center; 
+            align-items: stretch; 
+        }
+
+        .testimonial-card {
+            background: linear-gradient(to bottom right, var(--testimonial-bg-gradient-start), var(--testimonial-bg-gradient-end)); /* Degradado en la tarjeta */
+            color: var(--testimonial-text);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: var(--testimonial-shadow);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden; /* efecto de comillas */
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px); 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .testimonial-card::before {
+            content: "“"; 
+            font-size: 12rem; 
+            color: rgba(255, 255, 255, 0.1); 
+            position: absolute;
+            top: -40px; 
+            left: 10px;
+            line-height: 1;
+            z-index: 0; 
+            font-family: serif; 
+        }
+
+        .testimonial-card p {
+            position: relative; 
+            z-index: 1;
+            font-size: 1.1rem; 
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            flex-grow: 1; 
+        }
+
+        .testimonial-author {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto; 
+        }
+
+        .testimonial-author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--white);
+        }
+
+        .testimonial-author-info {
+            line-height: 1.2;
+        }
+
+        .testimonial-author-name {
+            font-weight: 600;
+            font-size: 1rem;
+            display: block;
+        }
+
+        .testimonial-rating {
+            color: var(--star-color);
+            font-size: 1rem; 
+            letter-spacing: 1px; 
+        }
+
+        /* FORMULARIO DE TESTIMONIOS */
+        #share-story {
+            background-color: var(--white);
+        }
+
+        .testimonial-form-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--brand-100);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--brand-700);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--brand-200);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--brand-500);
+            box-shadow: 0 0 0 3px var(--brand-100);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit-btn {
+            display: inline-block;
+            background: var(--brand-500);
+            color: var(--white);
+            padding: 0.9rem 2.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            text-align: center;
+            width: 100%;
+        }
+
+        .form-submit-btn:hover {
+            background: var(--brand-700);
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo"/>
+                <span>Conecta Contigo</span>
+            </a>
+
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html" class="active">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section testimonials-section" role="region" aria-label="Testimonios de usuarios">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>Lo que nuestra comunidad dice</h2>
+                    <p>Historias reales de crecimiento, conexión y bienestar.</p>
+                </header>
+
+                <div class="testimonials-grid">
+             
+                    <div class="testimonial-card animate-in" style="--d:0s">
+                        <p>"Encontré este espacio en un momento de mucha ansiedad. Las herramientas y la comunidad me han dado la calma y la perspectiva que necesitaba. Me siento menos sola."</p>
+                        <div class="testimonial-author">
+                            <img src="https://img.freepik.com/foto-gratis/mujer-joven-hermosa-sueter-rosa-calido-aspecto-natural-sonriente-retrato-aislado-cabello-largo_285396-896.jpg?semt=ais_hybrid&w=740&q=80" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Rosa Gonzales</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-in">
+                        <p>"Como estudiante, el estrés era mi día a día. Aprender sobre autocuidado aquí cambió todo. Ahora sé que cuidar de mí no es un lujo, es una necesidad."</p>
+                         <div class="testimonial-author">
+                            <img src="https://media.gq.com.mx/photos/67e2e0ced89a1ddf0a935ad1/master/w_2560%2Cc_limit/Hombres%2520alfa.jpg" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">John Calderón</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-in">
+                        <p>"Me sentía perdida entre las clases y lo que los demás esperaban de mí. Aquí aprendí a escucharme de nuevo, a entender qué necesito yo y no el resto. Fue como volver a casa."</p>
+                        <div class="testimonial-author">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQju4NsjPsA5LMHEME6pO48xhZQ4iNQlgxK5Djzg2LFDp4pbpXVSIX6PHZsdFMORDgb-6E&usqp=CAU" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Allison Velez</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-in">
+                        <p>"Mis pensamientos eran un caos y la ansiedad no me dejaba dormir. Empezar a escribir con las guías de journaling fue como encender una luz. Pude ordenar mis miedos y sentir que tenía el control."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Sofía Martinez</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-in" style="--d:.2s">
+                        <p>"Lo que más valoro de Conecta Contigo es que no hay juicios. Es un lugar donde puedo ser vulnerable, decir 'hoy no estoy bien' y encontrar apoyo. Sentir que no estás sola lo cambia todo."</p>
+                        <div class="testimonial-author">
+                            <img src="https://media.istockphoto.com/id/1389348844/es/foto/foto-de-estudio-de-una-hermosa-joven-sonriendo-mientras-est%C3%A1-de-pie-sobre-un-fondo-gris.jpg?s=612x612&w=0&k=20&c=kUufmNoTnDcRbyeHhU1wRiip-fNjTWP9owjHf75frFQ=" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Laura Díaz</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card animate-in" style="--d:.25s">
+                        <p>"La presión de la universidad me estaba consumiendo. Las técnicas que encontré aquí son herramientas reales que uso antes de un examen o cuando siento que todo se me viene encima."</p>
+                        <div class="testimonial-author">
+                            <img src="https://media.istockphoto.com/id/1335941248/es/foto/foto-de-un-joven-guapo-de-pie-sobre-un-fondo-gris.jpg?s=612x612&w=0&k=20&c=UK8BGVVCSmHen0sJAgxoZ6sBLrs0ld4TuCwczZZ89AY=" class="testimonial-author-img">
+                            <div class="testimonial-author-info">
+                                <span class="testimonial-author-name">Andrés Pinto</span>
+                                <div class="testimonial-rating">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+        <section id="share-story" class="section" role="form" aria-labelledby="form-heading">
+            <div class="container">
+                 <header class="section-header animate-in">
+                    <h2 id="form-heading">Tu voz también importa</h2>
+                    <p>Creemos en el poder de compartir. Tu historia puede ser la luz que otra persona necesita para encontrar su camino. Si te sientes cómodo, cuéntanos tu experiencia.</p>
+                </header>
+
+                <div class="testimonial-form-container animate-in" style="--d: .2s">
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Tu nombre (o déjalo en blanco para ser anónima)</label>
+                            <input type="text" id="name" name="name" placeholder="Ej: Ana G.">
+                        </div>
+                        <div class="form-group">
+                            <label for="story">Tu testimonio o historia</label>
+                            <textarea id="story" name="story" required placeholder="Comparte lo que sientes, tu proceso, o cómo las herramientas de autocuidado te han ayudado..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit-btn">Enviar mi historia</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <p>Creado con 💙 por y para jovenes que desean crecer desde el amor propio. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+    // Animaciones on scroll 
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>

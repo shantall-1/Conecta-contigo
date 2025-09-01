@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocuidado - Conecta Contigo</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2.5rem, 5vw + 1rem, 3.5rem);
+            color: var(--brand-700);
+            margin-bottom: 1rem;
+        }
+
+        .hero-section .subtitle {
+            font-size: 1.2rem;
+            color: var(--muted);
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .content-article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-article h3 {
+            font-size: 1.8rem;
+            color: var(--brand-700);
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-article p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--text);
+        }
+
+        .content-article .highlight {
+            font-style: italic;
+            color: var(--brand-700);
+            font-weight: 500;
+            display: block;
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--brand-100);
+            border-left: 4px solid var(--brand-500);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            margin: 2rem 0;
+        }
+
+        .content-article img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin: 2.5rem auto;
+        }
+
+
+        .habits-section {
+            background-color: var(--white);
+        }
+
+        .habits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .habit-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid var(--brand-100);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .habit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow);
+        }
+
+        .habit-card .icon-wrapper {
+            background-color: var(--brand-100);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: background-color var(--transition-speed);
+        }
+
+        .habit-card:hover .icon-wrapper {
+            background-color: var(--brand-200);
+        }
+
+        .habit-card .icon {
+            color: var(--brand-700);
+            width: 40px;
+            height: 40px;
+        }
+
+        .habit-card h4 {
+            font-size: 1.3rem;
+            color: var(--brand-700);
+            margin-bottom: 0.75rem;
+        }
+
+        .habit-card p {
+            font-size: 1rem;
+            color: var(--muted);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        .cta-section {
+            background-color: var(--brand-100);
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cta-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+
+        .cta-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .cta-card h4 {
+            color: var(--brand-700);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cta-card p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-card a {
+            font-weight: 600;
+            color: var(--brand-500);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-card a:hover {
+            color: var(--brand-700);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header" role="banner">
+        <div class="container flex-between">
+            <a href="index.html" class="brand" aria-label="Inicio Conecta Contigo">
+                <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+                <span>Conecta Contigo</span>
+            </a>
+
+            <nav id="mainNav" class="main-nav" role="navigation" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="autocuidado.html" class="active">Autocuidado</a></li>
+                    <li><a href="journaling.html">Journaling</a></li>
+                    <li><a href="estres.html">Estrés</a></li>
+                    <li><a href="testimonios.html">Testimonios</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="nosotras.html">Nosotras</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section animate-in">
+            <div class="container">
+                <h1>Autocuidado: El Arte de Conectar Contigo</h1>
+                <p class="subtitle">Descubre cómo pequeños actos de amor propio pueden transformar tu bienestar físico,
+                    mental y emocional.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <article class="content-article">
+                    <div class="animate-in">
+                        <h3>¿Qué es realmente el autocuidado?</h3>
+                        <p>
+                            El autocuidado es mucho más que un día de spa o una mascarilla. Es la práctica consciente y
+                            deliberada de atender tus propias necesidades. Es la forma en que te demuestras amor propio
+                            en el día a día. Va desde nutrir tu cuerpo con alimentos que te hacen sentir bien y dormir
+                            lo suficiente, hasta establecer límites saludables, decir "no" cuando es necesario y
+                            permitirte sentir sin juicio.
+                        </p>
+                        <p class="highlight">
+                            “Yo valgo. Yo merezco estar bien. Yo importo.”
+                        </p>
+                    </div>
+
+                    <img src="https://media.istockphoto.com/id/1028900652/es/foto/yoga-meditaci%C3%B3n-en-las-monta%C3%B1as-al-atardecer-viajes-vida-relajaci%C3%B3n-emocional-concepto.jpg?s=612x612&w=0&k=20&c=_rl6bp-uieBiSkEWaGEkMK2guAL4rh7orhaFlLn0jT4=" alt="Meditando tranquilamente en un entorno natural" class="animate-in" style="--d: .1s">
+                    <div class="animate-in" style="--d: .2s">
+                        <h3>¿Por qué deberías empezar a practicarlo hoy?</h3>
+                        <p>
+                            Porque tú eres la persona más importante de tu vida. En un mundo que constantemente exige tu
+                            tiempo y energía, es fácil olvidarse de una misma. A menudo, nos enfocamos en cumplir con
+                            las expectativas de los demás, pero descuidamos nuestra propia felicidad.
+                        </p>
+                        <p>
+                            Practicar el autocuidado es un acto radical de amor propio. Es reconocer que tu bienestar es
+                            una prioridad, no un lujo. Es darte permiso para descansar, para sanar y para crecer.
+                            Recuerda: no puedes servir desde una taza vacía. Cuidarte a ti misma te permite dar lo mejor
+                            de ti al mundo.
+                        </p>
+                    </div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuqReNleyL9g7KBqT_ycmHxvwPLrhOMrxerNWKKG_3D5zwqidTTFZC_My6TK13h4vZqiY&usqp=CAU"alt="Sonriendo feliz al aire libre" class="animate-in" style="--d: .3s">
+                </article>
+            </div>
+        </section>
+
+        <section class="section habits-section">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>Hábitos de Autocuidado para Integrar en tu Vida</h2>
+                    <p>Explora diferentes formas de cuidarte. No tienes que hacerlo todo, empieza por la que más resuene
+                        contigo hoy.</p>
+                </header>
+
+                <div class="habits-grid">
+                    <a href="dormir.html" class="habit-card animate-in" style="--d: .1s">
+                        <div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+                            </svg></div>
+                        <h4>Dormir Bien</h4>
+                        <p>Un sueño reparador es la base de tu bienestar físico y mental.</p>
+                    </a>
+                    <a href="alimentacion.html" class="habit-card animate-in" style="--d: .2s">
+                        <div class="icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                                <path
+                                    d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z" />
+                                <path d="M10 2c1 .5 2 2 2 5" />
+                            </svg>
+                        </div>
+                        <h4>Alimentación Consciente</h4>
+                        <p>Nutre tu cuerpo con alimentos que te den energía y te hagan sentir vital.</p>
+                    </a>
+                    <a href="tiempo.html" class="habit-card animate-in" style="--d: .3s">
+                        <div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                            </svg></div>
+                        <h4>Tiempo para Ti</h4>
+                        <p>Desconéctate y disfruta de momentos de calma solo para ti.</p>
+                    </a>
+                    <a href="limites.html" class="habit-card animate-in" style="--d: .4s">
+                        <div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg></div>
+                        <h4>Poner Límites</h4>
+                        <p>Aprende a decir "no" para proteger tu energía y respetar tus necesidades.</p>
+                    </a>
+                    <a href="movimiento.html" class="habit-card animate-in" style="--d: .5s">
+                        <div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            </svg></div>
+                        <h4>Mueve tu Cuerpo</h4>
+                        <p>Encuentra una actividad física que disfrutes y te ayude a liberar tensiones.</p>
+                    </a>
+                    <a href="journaling.html" class="habit-card animate-in" style="--d: .6s">
+                        <div class="icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="icon">
+                                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                            </svg></div>
+                        <h4>Escribir tus Sentimientos</h4>
+                        <p>El journaling es una herramienta poderosa para ordenar tus ideas y emociones.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta-section">
+            <div class="container">
+                <header class="section-header animate-in">
+                    <h2>¿Lista para el siguiente paso?</h2>
+                    <p>El autocuidado es un viaje. Aquí tienes más herramientas para acompañarte.</p>
+                </header>
+                <div class="cta-grid">
+                    <div class="cta-card animate-in">
+                        <h4>Explora el Journaling</h4>
+                        <p>Descubre cómo la escritura puede ser tu aliada para el autoconocimiento y la gestión
+                            emocional.</p>
+                        <a href="journaling.html">Empezar a escribir➡</a>
+                    </div>
+                    <div class="cta-card animate-in">
+                        <h4>Encuentra más Recursos</h4>
+                        <p>Accede a guías, meditaciones y herramientas prácticas para cuidar tu salud mental cada día.
+                        </p>
+                        <a href="recursos.html">Ver recursos ➡</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+             <p>Creado con 💙 por y para jovenes que desean crecer desde el amor propio. © 2025</p>
+    </footer>
+
+    <script>
+        // Animaciones on scroll 
+        const els = document.querySelectorAll('.animate-in');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        els.forEach(el => io.observe(el));
+    </script>
+</body>
+
+</html>

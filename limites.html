@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Autocuidado - Poner Límites</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+        .hero-section {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--brand-100), var(--brand-200));
+        }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      color: var(--brand-700);
+      margin-bottom: 1rem;
+    }
+
+    .hero-section .subtitle {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+ 
+    .content-article {
+      max-width: 800px;
+      margin: 3rem auto;
+    }
+
+    .content-article p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+      text-align: justify;
+    }
+
+    .content-article img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 2.5rem auto;
+      display: block;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .highlight {
+      font-style: italic;
+      color: var(--brand-700);
+      font-weight: 500;
+      display: block;
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--brand-100);
+      border-left: 4px solid var(--brand-500);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 2rem 0;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .tip-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      background: var(--bg);
+      padding: 2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--brand-100);
+    }
+
+    .tip-card .icon-wrapper {
+      flex-shrink: 0;
+      background-color: var(--brand-100);
+      color: var(--brand-700);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .tip-card-content h4 {
+      font-size: 1.2rem;
+      color: var(--brand-700);
+      margin-bottom: 0.5rem;
+    }
+
+    .tip-card-content p {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header" role="banner">
+    <div class="container flex-between">
+      <a href="index.html" class="brand">
+        <img src="https://placehold.co/64x64/71B9CC/FFFFFF?text=CC" alt="Logo Conecta Contigo" class="logo" />
+        <span>Conecta Contigo</span>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="autocuidado.html" class="active">Autocuidado</a></li>
+          <li><a href="journaling.html">Journaling</a></li>
+          <li><a href="estres.html">Estrés</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="nosotras.html">Nosotras</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-section animate-in">
+      <div class="container">
+        <h1>Poner Límites</h1>
+        <p class="subtitle">Poner límites no es ser mala onda, es ser honesta contigo misma. Es reconocer lo que te hace
+          bien y lo que no.</p>
+      </div>
+    </section>
+
+    <!-- ARTÍCULO PRINCIPAL -->
+    <section class="section">
+      <div class="container">
+        <article class="content-article">
+          <p>
+            A veces nos cuesta decir lo que sentimos, lo que no queremos o lo que nos incomoda, pero poner límites es
+            una forma de proteger tu energía, tu paz y tu tiempo. No se trata de alejar a los demás, sino de acercarte
+            más a ti, de respetarte y enseñarle al mundo cómo quieres que te traten.
+          </p>
+
+          <p class="highlight">
+            Poner límites es un acto de <b>amor propio</b> y de respeto hacia ti misma.
+          </p>
+
+          <img
+            src="https://i.pinimg.com/736x/7a/4f/1e/7a4f1eb10f8f3b357b5a7c576c6200d6.jpg"
+            alt="Ilustración sobre poner límites">
+        </article>
+      </div>
+    </section>
+
+    <!-- CONSEJOS -->
+    <section class="section tips-section">
+      <div class="container">
+        <header class="section-header animate-in">
+          <h2>Consejos para Poner Límites</h2>
+          <p>Pequeños pasos que te ayudarán a sentirte más libre y segura de ti misma.</p>
+        </header>
+
+        <div class="tips-grid">
+          <div class="tip-card animate-in">
+            <div class="icon-wrapper">1</div>
+            <div class="tip-card-content">
+              <h4>Di lo que sientes con claridad y calma</h4>
+              <p>No necesitas gritar ni justificarte demasiado. Un “prefiero no hacerlo” o “eso me incomoda” es válido.
+                Tu voz importa.</p>
+            </div>
+          </div>
+
+          <div class="tip-card animate-in">
+            <div class="icon-wrapper">2</div>
+            <div class="tip-card-content">
+              <h4>Escucha tu incomodidad</h4>
+              <p>Si algo te hace sentir incómoda, cansada o usada… ahí es donde necesitas un límite. Confía en lo que
+                sientes.</p>
+            </div>
+          </div>
+
+          <div class="tip-card animate-in">
+            <div class="icon-wrapper">3</div>
+            <div class="tip-card-content">
+              <h4>No te sientas culpable por decir “no”</h4>
+              <p>Decir que no no te hace egoísta. Te hace responsable de tu bienestar. Estás eligiendo cuidarte.</p>
+            </div>
+          </div>
+
+          <div class="tip-card animate-in">
+            <div class="icon-wrapper">4</div>
+            <div class="tip-card-content">
+              <h4>Rodéate de personas que respeten tus límites</h4>
+              <p>Quien te quiere de verdad no se molesta porque te cuides. Al contrario, lo entiende y lo valora.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="back-button-wrapper animate-in">
+          <a href="autocuidado.html" class="back-button">
+            ← Volver a Autocuidado
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>Creado con 💙 por y para jóvenes que desean crecer desde el amor propio. © 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    const els = document.querySelectorAll('.animate-in');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    els.forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
