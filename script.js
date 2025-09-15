@@ -1,5 +1,5 @@
 function calcularResultado() {
-      const form = document.forms["formulario-salud"];
+      const form = document.forms["formsalud"];
       let total = 0;
       for (let i = 1; i <= 5; i++) {
         const respuesta = form["q" + i].value;
@@ -35,7 +35,7 @@ function calcularResultado() {
 function calcularResultado() {
     let formulario = document.getElementById("formsalud")
 
-    usuario.name = formulario.name.value
+    formsalud.pregunta1 = "1. ¿Te has sentido triste o desmotivado últimamente?"
     usuario.age = formulario.age.value
     usuario.sexo = formulario.sexo.value
 
