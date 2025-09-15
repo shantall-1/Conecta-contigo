@@ -270,7 +270,7 @@
                     </div>
         </section>
 
-        <section id="share-story" class="section" role="form" aria-labelledby="form-heading">
+        <section id="share-story" class="section" role="form" aria-labelledby="form-heading" id="user">
             <div class="container">
                  <header class="section-header animate-in">
                     <h2 id="form-heading">Tu voz también importa</h2>
@@ -287,13 +287,14 @@
                             <label for="story">Tu testimonio o historia</label>
                             <textarea id="story" name="story" required placeholder="Comparte lo que sientes, tu proceso, o cómo las herramientas de autocuidado te han ayudado..."></textarea>
                         </div>
-                        <button type="submit" class="form-submit-btn">Enviar mi historia</button>
+                       <button type="button" class="form-submit-btn" onclick="enviar(); mostrarMensaje();">
+                        <p>Enviar mi historia </p> </button>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-
+<script src="testimonio.js"></script>
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <p>Creado con 💙 por y para jovenes que desean crecer desde el amor propio. © 2025</p>
