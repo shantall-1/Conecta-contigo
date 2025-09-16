@@ -6,7 +6,7 @@ function enviar() {
     console.log("Testimonio:", testimonio);
 }
 
-//Mensaje de agradecimiento por mandar el testimonio si lleno el campo de testimonio de lo contrario poner un mensaje de error
+
 function mostrarMensaje() {
     var testimonio = document.getElementById("story").value;
     if (testimonio) {
@@ -15,5 +15,13 @@ function mostrarMensaje() {
         alert("Por favor, completa el campo de testimonio antes de enviar.");
     }
 }
-
-//
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+    enviarYLimpiar(); 
+    mostrarMensaje();
+});
+function enviarYLimpiar() {
+    enviar();
+    document.getElementById("name").value = "";
+    document.getElementById("story").value = "";
+}
