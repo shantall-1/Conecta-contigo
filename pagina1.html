@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de Salud Mental</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #ffffff);
+      padding: 40px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #006064;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #ffffff;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    .question {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-left: 5px solid #0097a7;
+      border-radius: 8px;
+    }
+
+    .question p {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+
+    .result {
+      background-color: #e1f5fe;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 25px;
+      font-weight: bold;
+      color: #01579b;
+      white-space: pre-line;
+    }
+
+    button {
+      background-color: #00796b;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .personal-info {
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Test de Salud Mental</h1>
+
+  <form id="mentalHealthTest">
+    <div class="personal-info">
+    <label for="nombre">Nombres:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="edad">Edad:</label>
+    <input type="number" name="edad" min="10" max="100" required>
+
+    <label>Género:</label>
+
+    <input type="radio" name="genero" id="masculino" value="masculino">
+    <label for="masculino">Masculino</label><br>
+
+    <input type="radio" name="genero" id="femenino" value="femenino">
+    <label for="femenino">Femenino</label><br>
+
+    <input type="radio" name="genero" id="otro" value="otro">
+    <label for="otro">Otro</label>
+</div>
+
+    <div class="question">
+      <p>1. ¿Con qué frecuencia te sientes triste o decaído?</p>
+      <label><input type="radio" name="q1" value="0"> Nunca</label>
+      <label><input type="radio" name="q1" value="1"> A veces</label>
+      <label><input type="radio" name="q1" value="2"> Frecuentemente</label>
+      <label><input type="radio" name="q1" value="3"> Casi siempre</label>
+    </div>
+
+    <div class="question">
+      <p>2. ¿Tienes dificultad para concentrarte?</p>
+      <label><input type="radio" name="q2" value="0"> Nunca</label>
+      <label><input type="radio" name="q2" value="1"> Rara vez</label>
+      <label><input type="radio" name="q2" value="2"> A menudo</label>
+      <label><input type="radio" name="q2" value="3"> Siempre</label>
+    </div>
+
+    <div class="question">
+      <p>3. ¿Tienes problemas para dormir o descansar bien?</p>
+      <label><input type="radio" name="q3" value="0"> Nunca</label>
+      <label><input type="radio" name="q3" value="1"> Algunas noches</label>
+      <label><input type="radio" name="q3" value="2"> Varias veces por semana</label>
+      <label><input type="radio" name="q3" value="3"> Todas las noches</label>
+    </div>
+
+    <div class="question">
+      <p>4. ¿Te sientes con energía y motivación para hacer tus actividades diarias?</p>
+      <label><input type="radio" name="q4" value="0"> Siempre</label>
+      <label><input type="radio" name="q4" value="1"> La mayoría del tiempo</label>
+      <label><input type="radio" name="q4" value="2"> Rara vez</label>
+      <label><input type="radio" name="q4" value="3"> Nunca</label>
+    </div>
+
+    <button type="button" onclick="calcularResultado()">Ver Resultado</button>
+  </form>
+
+  <div class="result" id="resultado"></div>
+
+  <script src="script01.js"></script>
