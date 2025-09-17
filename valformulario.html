@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta Contigo - Formulario</title>
+  <link rel="stylesheet" href="stylesformulario.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Conecta Contigo</h1>
+    <p>Queremos conocer tu opinión para seguir mejorando 💙</p>
+
+    <form id="formOpiniones">
+      <!-- Preguntas abiertas -->
+      <div class="campo">
+        <label for="recomendacion">¿Qué nos recomiendas para mejorar?</label>
+        <textarea id="recomendacion" name="recomendacion" rows="3" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="importa">¿Qué opinión o aspecto consideras que importa más?</label>
+        <textarea id="importa" name="importa" rows="3" required></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="implementar">¿Qué podemos implementar?</label>
+        <textarea id="implementar" name="implementar" rows="3" required></textarea>
+      </div>
+
+      <!-- Pregunta importancia -->
+      <fieldset class="campo">
+        <legend>¿Qué tanto importa para ti lo que podemos implementar?</legend>
+        <label><input type="radio" name="importancia" value="Mucho" required> Mucho</label>
+        <label><input type="radio" name="importancia" value="Regular"> Regular</label>
+        <label><input type="radio" name="importancia" value="Poco"> Poco</label>
+      </fieldset>
+
+      <!-- Pregunta satisfacción -->
+      <fieldset class="campo">
+        <legend>¿Te sientes satisfecha con la información brindada?</legend>
+        <label><input type="radio" name="satisfaccion" value="Muy satisfecha" required> Muy satisfecha</label>
+        <label><input type="radio" name="satisfaccion" value="Satisfecha"> Satisfecha</label>
+        <label><input type="radio" name="satisfaccion" value="Neutral"> Neutral</label>
+        <label><input type="radio" name="satisfaccion" value="Insatisfecha"> Insatisfecha</label>
+        <label><input type="radio" name="satisfaccion" value="Muy insatisfecha"> Muy insatisfecha</label>
+      </fieldset>
+
+      <button type="submit">Enviar</button>
+    </form>
+<center><p id="mensajeConfirmacion" style="display:none;"> 💙 ¡Gracias por tu opinión! 💙</p></center>
+
+  </main>
+
+  <script src="formularioval.js"></script>
+</body>
+</html>
+
+

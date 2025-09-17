@@ -1,0 +1,134 @@
+/* Variables de color */
+:root {
+  --fondo: #f4f8fc;
+  --tarjeta: #ffffff;
+  --borde: #e0e6ef;
+  --texto:  #4B9CAE;
+  --muted: #64748b;
+  --principal: #4B9CAE;
+  --verde: #71B9CC;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: url("https://i.pinimg.com/1200x/cf/b9/e6/cfb9e662c227ef49a684389c9f37a2fe.jpg") no-repeat center top;
+  background-size: cover;
+  color: var(--texto);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+
+  animation: desplazarFondo 40s linear infinite;
+}
+
+@keyframes desplazarFondo {
+  0% { background-position: center top; }
+  100% { background-position: center bottom; }
+}
+
+
+
+
+/* Contenedor */
+.contenedor {
+  max-width: 700px;
+  width: 100%;
+  background: var(--tarjeta);
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  border: 1px solid var(--borde);
+}
+
+/* Títulos */
+h1 {
+  color: var(--principal);
+  margin-top: 0;
+}
+p {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 1.5rem;
+}
+label, legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Textareas */
+textarea {
+  width: 100%;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 80px;
+}
+textarea:focus {
+  outline: none;
+  border-color: var(--principal);
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.2);
+}
+
+/* Radios */
+fieldset {
+  border: none;
+  padding: 0;
+}
+fieldset label {
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+input[type="radio"] {
+  accent-color: var(--principal);
+  margin-right: 6px;
+}
+
+/* Botón */
+button {
+  background: var(--principal);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  width: 100%;
+}
+button:hover {
+  background: #a39ff5;
+}
+
+/* Mensaje de confirmación */
+#mensajeConfirmacion {
+  display: none;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--verde);
+}
