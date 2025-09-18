@@ -1,27 +1,28 @@
 function enviarFormulario() {
-  const topic = document.getElementById("infoTopic").value;
-  const name = document.getElementById("userName").value.trim();
-  const email = document.getElementById("userEmail").value.trim();
-  const phone = document.getElementById("userPhone").value.trim();
+  var nombre = document.getElementById("userName").value;
+  var email = document.getElementById("userEmail").value;
+  var telefono = document.getElementById("userPhone").value;
 
-  if (!name) {
-    alert("Por favor ingresa tu nombre.");
+  if (nombre === "") {
+    alert("Ingresa tu nombre.");
     return;
   }
 
-  if (!email && !phone) {
-    alert("Debes proporcionar al menos un correo electrónico o número de teléfono.");
+  if (email === "" && telefono === "") {
+    alert("Escribe al menos un correo o teléfono.");
     return;
   }
 
-  // Aquí puedes hacer un fetch/post al backend si lo tienes.
-  console.log("Formulario enviado:");
-  console.log({ topic, name, email, phone });
-
-  // Limpia el formulario y cierra el modal
+  // Limpia el formulario
   document.getElementById("infoForm").reset();
-  const modal = bootstrap.Modal.getInstance(document.getElementById('infoModal'));
-  modal.hide();
 
-  alert("Gracias por tu interés. Te contactaremos pronto.");
+  // Cierra el modal (correctamente con Bootstrap)
+  var modalElement = document.getElementById('infoModal');
+  var modalInstance = bootstrap.Modal.getInstance(modalElement);
+  if (!modalInstance) {
+    modalInstance = new bootstrap.Modal(modalElement);
+  }
+  modalInstance.hide();
+
+  alert("Gracias por contactarnos.");
 }
