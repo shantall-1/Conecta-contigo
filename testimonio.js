@@ -7,7 +7,8 @@ function enviar() {
         console.log("Nombre:", nombre || "Anónimo");
         console.log("Testimonio:", testimonio);
         alert("Gracias por enviar tu testimonio. ¡Apreciamos tus comentarios!");
-     //LIMPIAR FORMULARIO  
+    
+        //LIMPIA FORMULARIO  
         document.getElementById("testimonioForm").reset(); 
     } else {
         alert("Por favor, completa el campo de testimonio antes de enviar.");
