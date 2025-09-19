@@ -13,10 +13,16 @@ function calcularResultado() {
         return;
       }
 
+      let respuestasSeleccionadas = [];
+
       for (let i = 1; i <= 4; i++) {
         const respuesta = form.querySelector(`input[name="q${i}"]:checked`);
         if (respuesta) {
           puntaje += parseInt(respuesta.value);
+          respuestasSeleccionadas.push({
+            pregunta: `q${i}`,
+            valor: parseInt(respuesta.value)
+          });
         } else {
           resultado.textContent = "Por favor, responde todas las preguntas.";
           console.log("Faltan preguntas por responder.");
@@ -44,8 +50,24 @@ function calcularResultado() {
       console.log("Puntaje total:", puntaje);
       console.log("Interpretación:", mensaje);
       console.log("==============================");
+
+      // Guardar en Local Storage
+      const nuevaEntrada = {
+        nombre,
+        edad,
+        genero: genero.value,
+        respuestas: respuestasSeleccionadas,
+        puntaje,
+        mensaje,
+        fecha: new Date().toISOString()
+      };
+
+      let historial = JSON.parse(localStorage.getItem("respuestas")) || [];
+      historial.push(nuevaEntrada);
+      localStorage.setItem("respuestas", JSON.stringify(historial));
     }
 
+    // Soporte para Enter
     document.addEventListener("keydown", function(event) {
       if (event.key === "Enter") {
         event.preventDefault();
@@ -53,3 +75,5 @@ function calcularResultado() {
         console.log("Enter presionado: se ejecutó el test.");
       }
     });
+
+
