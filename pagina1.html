@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title>Test de Salud Mental</title>
+
+  <!-- [Fuente de Google Fonts] -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- [Estilos en línea] -->
   <style>
+    /* [Estilo global del body] */
     body {
       font-family: 'Roboto', sans-serif;
       background: linear-gradient(120deg, #e0f7fa, #ffffff);
@@ -12,12 +17,14 @@
       color: #333;
     }
 
+    /* [Título principal] */
     h1 {
       text-align: center;
       color: #006064;
       margin-bottom: 30px;
     }
 
+    /* [Estilo del formulario] */
     form {
       background-color: #ffffff;
       max-width: 500px;
@@ -27,6 +34,7 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
+    /* [Estilos de etiquetas y campos de texto/número] */
     label {
       display: block;
       margin: 10px 0 5px;
@@ -42,6 +50,7 @@
       font-size: 1em;
     }
 
+    /* [Contenedor de cada pregunta] */
     .question {
       margin-top: 20px;
       padding: 15px;
@@ -50,15 +59,18 @@
       border-radius: 8px;
     }
 
+    /* [Texto de las preguntas] */
     .question p {
       margin-bottom: 10px;
       font-weight: bold;
     }
 
+    /* [Estilo de los botones de radio] */
     input[type="radio"] {
       margin-right: 8px;
     }
 
+    /* [Estilo de la caja de resultado] */
     .result {
       background-color: #e1f5fe;
       padding: 15px;
@@ -69,6 +81,7 @@
       white-space: pre-line;
     }
 
+    /* [Estilo del botón de enviar] */
     button {
       background-color: #00796b;
       color: white;
@@ -87,6 +100,7 @@
       background-color: #004d40;
     }
 
+    /* [Estilo para la sección de datos personales] */
     .personal-info {
       margin-bottom: 30px;
     }
@@ -94,28 +108,32 @@
 </head>
 <body>
 
+  <!-- [Encabezado principal de la página] -->
   <h1>Test de Salud Mental</h1>
 
+  <!-- [Formulario del test] -->
   <form id="mentalHealthTest">
+
+    <!-- [Datos personales del usuario] -->
     <div class="personal-info">
-    <label for="nombre">Nombres:</label>
-    <input type="text" id="nombre" name="nombre" required>
+      <label for="nombre">Nombres:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
-    <label for="edad">Edad:</label>
-    <input type="number" name="edad" min="10" max="100" required>
+      <label for="edad">Edad:</label>
+      <input type="number" name="edad" min="10" max="100" required>
 
-    <label>Género:</label>
+      <label>Género:</label>
+      <input type="radio" name="genero" id="masculino" value="masculino">
+      <label for="masculino">Masculino</label><br>
 
-    <input type="radio" name="genero" id="masculino" value="masculino">
-    <label for="masculino">Masculino</label><br>
+      <input type="radio" name="genero" id="femenino" value="femenino">
+      <label for="femenino">Femenino</label><br>
 
-    <input type="radio" name="genero" id="femenino" value="femenino">
-    <label for="femenino">Femenino</label><br>
+      <input type="radio" name="genero" id="otro" value="otro">
+      <label for="otro">Otro</label>
+    </div>
 
-    <input type="radio" name="genero" id="otro" value="otro">
-    <label for="otro">Otro</label>
-</div>
-
+    <!-- [Pregunta 1] -->
     <div class="question">
       <p>1. ¿Con qué frecuencia te sientes triste o decaído?</p>
       <label><input type="radio" name="q1" value="0"> Nunca</label>
@@ -124,6 +142,7 @@
       <label><input type="radio" name="q1" value="3"> Casi siempre</label>
     </div>
 
+    <!-- [Pregunta 2] -->
     <div class="question">
       <p>2. ¿Tienes dificultad para concentrarte?</p>
       <label><input type="radio" name="q2" value="0"> Nunca</label>
@@ -132,6 +151,7 @@
       <label><input type="radio" name="q2" value="3"> Siempre</label>
     </div>
 
+    <!-- [Pregunta 3] -->
     <div class="question">
       <p>3. ¿Tienes problemas para dormir o descansar bien?</p>
       <label><input type="radio" name="q3" value="0"> Nunca</label>
@@ -140,6 +160,7 @@
       <label><input type="radio" name="q3" value="3"> Todas las noches</label>
     </div>
 
+    <!-- [Pregunta 4] -->
     <div class="question">
       <p>4. ¿Te sientes con energía y motivación para hacer tus actividades diarias?</p>
       <label><input type="radio" name="q4" value="0"> Siempre</label>
@@ -148,9 +169,15 @@
       <label><input type="radio" name="q4" value="3"> Nunca</label>
     </div>
 
+    <!-- [Botón para enviar el test y ver resultado] -->
     <button type="button" onclick="calcularResultado()">Ver Resultado</button>
   </form>
 
+  <!-- [Contenedor del resultado generado] -->
   <div class="result" id="resultado"></div>
 
+  <!-- [Script externo con la lógica del test] -->
   <script src="script01.js"></script>
+
+</body>
+</html>
