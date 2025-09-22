@@ -40,11 +40,11 @@ document.getElementById("formOpiniones").addEventListener("submit", function(e) 
 
   // Lista de frases motivacionales
   const frases = [
-    "✨ Recuerda: tu bienestar es lo más importante.",
-    "💙 Cada paso que das cuenta, sigue adelante.",
-    "🌸 Está bien pedir ayuda, no estás sola.",
-    "☀️ Mereces sentirte bien y estar en paz.",
-    "🌈 Cuida tu mente tanto como cuidas tu corazón."
+    "✨ Recuerda: tu bienestar es lo más importante ✨",
+    "💙 Cada paso que das cuenta, sigue adelante 💙",
+    "🌸 Está bien pedir ayuda, no estás sola 🌸 ",
+    "☀️ Mereces sentirte bien y estar en paz ☀️",
+    "🌈 Cuida tu mente tanto como cuidas tu corazón 🌈"
   ];
 
   // Escoger una frase aleatoria
